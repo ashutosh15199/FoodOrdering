@@ -3,17 +3,17 @@ import {createSlice} from '@reduxjs/toolkit'
 const cartSlice = createSlice({
 name:"cart",
 initialState:{
-    item:[],
+    items:[],
 },
 reducers:{
     addItem:(state,action)=>{
-        state.item.push(action.payload);
+        state.items.push(action.payload);
     },
     removeItem:(state,action)=>{
-        state.item.pop();
+        state.items.pop();
     },
     clearItem:(state)=>{
-        state.item=[];
+        state.items=[];
     }
 },
 });

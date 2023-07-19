@@ -15,9 +15,9 @@ const RestaurantCart = (props) => {
 
     const {user} = useContext(UserContext);
     return (
-      <div className="p-4 m-4 w-[300px] h-[500px] rounded-lg bg-pink-50 hover:bg-gray-200" >
+      <div className="p-4 m-7  rounded-lg bg-pink-50 hover:bg-gray-200" >
         <img
-          className="rounded-lg"
+          className="rounded-lg  h-auto aspect-square w-full max-h-[200px]"
           alt="res-logo"
           src={CDN_URL+cloudinaryImageId+".png"}
           
@@ -27,8 +27,8 @@ const RestaurantCart = (props) => {
         <h4 className="bold">{avgRating} stars</h4>
         <h4 className="bold">{costForTwo / 100}</h4>
         <h4 className="bold">{deliveryTime}</h4>
-        <span className="font-bold">{user.name}::--</span> 
-      <span className="font-bold">{user.email}</span>
+        <p className="font-bold">{user.name}::--</p> 
+      <p className="font-bold">{user.email}</p>
       </div>
     );
   };

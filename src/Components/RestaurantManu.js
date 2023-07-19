@@ -11,7 +11,7 @@ const RestaurantMenu = () => {
 
   if (resInfo === null) return <Shimmer />;
 
-  const { name, cuisines, costForTwoMessage } =
+  const { name, cloudinaryImageId, cuisines, costForTwoMessage } =
     resInfo?.cards[0]?.card?.card?.info;
 
   const { itemCards } =
@@ -26,13 +26,12 @@ const RestaurantMenu = () => {
 
   return (
     <div className="flex p-3 m-3">
+      <h1>{cloudinaryImageId}</h1>
       <h1>{name}</h1>
       <p>
         {cuisines.join(", ")} - {costForTwoMessage}
       </p>
-      <div>
-        <button className="p-2 m-5 bg-green-100" onClick={()=>handleItem()}>AddItem</button>
-      </div>
+    
       <h2>Menu</h2>
       <ul>
         {itemCards.map((item) => (
